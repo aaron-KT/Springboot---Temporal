@@ -91,7 +91,6 @@
 			<artifactId>temporal-serviceclient</artifactId>
 			<version>1.20.0</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>

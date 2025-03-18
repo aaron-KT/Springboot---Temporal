@@ -14,6 +14,7 @@ public class HospitalActivitiesImpl implements HospitalActivities {
 
     public HospitalActivitiesImpl(HospitalPersistenceService hospitalPersistenceService) {
         this.hospitalPersistenceService = hospitalPersistenceService;
+        
     }
 
     @Override

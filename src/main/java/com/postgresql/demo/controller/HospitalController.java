@@ -1,6 +1,6 @@
 package com.postgresql.demo.controller;
 
-import com.postgresql.demo.model.Hospital;
+import com.postgresql.demo.dto.HospitalRequestDTO;
 import com.postgresql.demo.services.HospitalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +13,8 @@ public class HospitalController {
     private HospitalService hospitalService;
 
     @PostMapping("/register")
-    public String registerHospital(@RequestBody Hospital hospital) {
-        hospitalService.startHospitalWorkflow(hospital);
-        return "Hospital registration started!";
+    public String registerHospital(@RequestBody HospitalRequestDTO hospitalRequestDTO) {
+        hospitalService.startHospitalWorkflow(hospitalRequestDTO);
+        return "Hospital registration workflow started!";
     }
-    
 }
